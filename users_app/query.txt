@@ -1,0 +1,28 @@
+User.objects.create(first_name="Jeraldine", last_name= "Flores", email_address= "dindin@yahoo.com", age="5")
+User.objects.create(first_name="Jamina", last_name= "Flores", email_address= "jamina@yahoo.com", age="9")
+User.objects.create(first_name="Jaden", last_name= "Flores", email_address= "jaden@yahoo.com", age="13")
+
+//Query: Retrieve all the users 
+User.objects.all()
+
+//Query: Retrieve the last user
+User.objects.last()
+
+//Query: Retrieve the first user
+User.objects.first()
+
+//Query: Change the user with id=3 so their last name is Pancakes.
+c=User.objects.get(id=3)
+c.last_name = "Pancakes"
+c.save()
+
+//Query: Delete the user with id=2 from the database
+ c= User.objects.get(id=2)
+ c.delete()
+
+//Query: Get all the users, sorted by their first name
+for i in all_Users:
+  print(i.first_name)
+
+//BONUS Query: Get all the users, sorted by their first name in descending order
+User.objects.all().order_by("-first_name")
